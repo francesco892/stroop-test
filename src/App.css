@@ -1,13 +1,12 @@
 .container {
+  display: flex;
   width: 800px;
   height: 400px;
-  margin: 50px;
   background-color: white;
-  flex: 0 0 auto;
   border: 1px solid #ddd;
   border-radius: 50px;
-  display: flex;
   padding: 2rem;
+  gap: 2rem;
 }
 
 section {
@@ -17,20 +16,4 @@ section {
   align-items: center;
   flex: 1;
   position: relative;
-}
-
-p {
-  text-align: justify;
-}
-
-.purple {
-  color: red;
-}
-
-.green {
-  color: green;
-}
-
-.bold {
-  font-weight: bold;
 }

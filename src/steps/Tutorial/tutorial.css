@@ -1,0 +1,28 @@
+.game-desc {
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+h4 {
+    margin: 0 0 .5rem 0;
+}
+
+p {
+    margin: 0;
+    text-align: justify;
+}
+
+.purple {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.bold {
+    font-weight: bold;
+}
