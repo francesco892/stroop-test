@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-image: url("./assets/minimize-3.svg");
+    font-family: Arial, Helvetica, sans-serif;
+}

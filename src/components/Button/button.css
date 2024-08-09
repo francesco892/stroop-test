@@ -1,0 +1,35 @@
+.button {
+    background: none;
+    color: inherit;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+.l-size {
+    font-size: larger;
+    padding: 1rem 2rem;
+}
+
+.m-size {
+    font-size: large;
+    padding: 1rem;
+}
+
+.s-size {
+    font-size: medium;
+    padding: .5rem;
+}
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

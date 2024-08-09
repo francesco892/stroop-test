@@ -1,0 +1,8 @@
+.choices {
+    display: flex;
+    gap: .5rem;
+}
+
+.choices>.button {
+    flex: 1 1 0px;
+}
