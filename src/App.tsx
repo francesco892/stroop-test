@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './App.css';
+import GameResult from './models/gameResults';
 import { Step } from './steps';
 import Game from './steps/Game/game';
 import Result from './steps/Result/result';
 import Tutorial from './steps/Tutorial/tutorial';
-import GameResult from './models/gameResults';
 
 const App = () => {
 
@@ -23,7 +23,7 @@ const App = () => {
         />
       )}
       {currentStep === Step.RESULT && (
-        <Result gameResult={gameResult!} onNewGame={() => setCurrentStep(Step.GAME)} />
+        <Result gameResult={gameResult!} onBack={() => setCurrentStep(Step.TUTORIAL)} onNewGame={() => setCurrentStep(Step.GAME)} />
       )}
     </div>
   )

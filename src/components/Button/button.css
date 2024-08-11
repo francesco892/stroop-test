@@ -9,7 +9,7 @@
     outline: inherit;
 }
 
-.button:hover {
+.button.hoverable:hover {
     background-color: #ddd;
 }
 
