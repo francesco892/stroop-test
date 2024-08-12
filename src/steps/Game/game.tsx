@@ -7,7 +7,7 @@ import { getRandomElement, getRandomElements, shuffleArray } from "../../utils/r
 import "./game.css";
 
 const ROUNDS: number = import.meta.env.VITE_GAME_ROUNDS;
-const CHOICES: number = import.meta.env.VITE_GAME_COLOR_CHOICES;
+const CHOICES: number = import.meta.env.VITE_GAME_CHOICES;
 const COLORS = ["red", "green", "blue", "yellow", "orange", "purple", "brown", "pink", "grey"];
 
 const Game = ({ onGameEnd, onGameCancel }: { onGameEnd: (gameResult: GameResult) => void, onGameCancel: callback }) => {

@@ -3,6 +3,7 @@ import callback from "../../models/callback";
 import "./tutorial.css";
 
 const ROUNDS: number = import.meta.env.VITE_GAME_ROUNDS;
+const CHOICES: number = import.meta.env.VITE_GAME_CHOICES;
 
 const Tutorial = ({ onGameStart }: { onGameStart: callback }) => {
     return (
@@ -23,7 +24,7 @@ const Tutorial = ({ onGameStart }: { onGameStart: callback }) => {
                         <p>
                             You'll be shown {ROUNDS} words, each representing a specific color but written in a different one.
                             <br />
-                            For each word you'll have to pick between multiple choices the color the word is written in, not the one it's spelling.
+                            For each word you'll have to pick between {CHOICES} choices the color the word is written in, not the one it's spelling.
                             <br />
                             For example: if the word <span className="bold purple">purple</span> is shown, you'll have to pick red,
                             if the word <span className="bold green">orange</span> is shown, you'll have to pick green and so on...

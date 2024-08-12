@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  max-width: 800px;
+  max-width: 700px;
   height: 460px;
   flex:1;
   background-color: white;
