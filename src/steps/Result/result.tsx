@@ -11,8 +11,8 @@ const Result = ({ gameResult, onBack, onNewGame }: { gameResult: GameResult,onBa
             <h2>Your Score is: {gameResult.score}/{ROUNDS}</h2>
             <h3>You completed the test in: {(gameResult.gameTime / 1000).toFixed(2)} seconds</h3>
             <ButtonGroup>
-                <Button onClick={onBack} hoverable>Back to Home</Button>
-                <Button onClick={onNewGame} hoverable>Try again!</Button>
+                <Button onClick={onBack}>Back to Home</Button>
+                <Button onClick={onNewGame}>Try again!</Button>
             </ButtonGroup>
         </section>
     )

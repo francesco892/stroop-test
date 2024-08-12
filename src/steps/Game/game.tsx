@@ -7,6 +7,7 @@ import { getRandomElement, getRandomElements, shuffleArray } from "../../utils/r
 import "./game.css";
 
 const ROUNDS: number = import.meta.env.VITE_GAME_ROUNDS;
+const CHOICES: number = import.meta.env.VITE_GAME_COLOR_CHOICES;
 const COLORS = ["red", "green", "blue", "yellow", "orange", "purple", "brown", "pink", "grey"];
 
 const Game = ({ onGameEnd, onGameCancel }: { onGameEnd: (gameResult: GameResult) => void, onGameCancel: callback }) => {
@@ -30,7 +31,7 @@ const Game = ({ onGameEnd, onGameCancel }: { onGameEnd: (gameResult: GameResult)
     }, [round, score, onGameEnd, startTimestamp]);
 
     const forcedChoices = [color, colorName];
-    const randomChoices = getRandomElements(COLORS.filter(c => !forcedChoices.includes(c)), 2);
+    const randomChoices = getRandomElements(COLORS.filter(c => !forcedChoices.includes(c)), CHOICES - 2);
     const choices = shuffleArray([...forcedChoices, ...randomChoices]);
 
     const onChoiceButtonClick = (c: string) => {
@@ -45,9 +46,9 @@ const Game = ({ onGameEnd, onGameCancel }: { onGameEnd: (gameResult: GameResult)
             <Button size="s" className="top-right" onClick={onGameCancel} >
                 Back
             </Button>
-            <h1 style={{ color }}>{colorName}</h1>
+            <h1 className="current-color" style={{ color }}>{colorName}</h1>
             <ButtonGroup>
-                {choices.map((c, index) => <Button key={index} onClick={() => onChoiceButtonClick(c)}>{c}</Button>)}
+                {choices.map((c, index) => <Button key={index + "-" + c} onClick={() => onChoiceButtonClick(c)}>{c}</Button>)}
             </ButtonGroup>
         </section>
     )

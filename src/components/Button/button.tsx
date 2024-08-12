@@ -1,10 +1,19 @@
-import React from "react";
-import "./button.css";
+import { useState } from "react";
 import callback from "../../models/callback";
+import "./button.css";
 
-const Button = ({ children, className, size, hoverable, onClick }: { children?: React.ReactNode, className?: string, size?: "l" | "m" | "s", hoverable?: boolean, onClick?: callback }) => {
+const Button = ({ children, id, className, size, onClick }: { children?: React.ReactNode, id?: string, className?: string, size?: "l" | "m" | "s", onClick?: callback }) => {
+
+    const [hover, setHover] = useState(false);
+
     return (
-        <button className={`button ${hoverable ? "hoverable" : ""} ${size || "m"}-size ${className || ""}`} onClick={onClick}>
+        <button
+            id={id}
+            className={`button ${hover ? "hover" : ""} ${size || "m"}-size ${className || ""}`}
+            onClick={onClick}
+            onMouseMove={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+        >
             {children}
         </button>
     )

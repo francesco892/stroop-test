@@ -40,7 +40,7 @@ const Tutorial = ({ onGameStart }: { onGameStart: callback }) => {
             </section>
             <section>
                 <h2>Are you ready?</h2>
-                <Button size='l' hoverable onClick={onGameStart}>
+                <Button size='l' onClick={onGameStart}>
                     Start the test
                 </Button>
             </section>

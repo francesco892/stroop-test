@@ -1,12 +1,15 @@
 .container {
   display: flex;
-  width: 800px;
-  height: 400px;
+  max-width: 800px;
+  height: 460px;
+  flex:1;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 50px;
   padding: 2rem;
-  gap: 2rem;
+  gap: 1rem;
+  margin: 1rem;
+  min-height: 0;
 }
 
 section {
@@ -16,4 +19,12 @@ section {
   align-items: center;
   flex: 1;
   position: relative;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    height: 88vh;
+    max-height: 100%;
+  }
 }
