@@ -1,7 +1,7 @@
 .container {
   display: flex;
-  max-width: 700px;
-  height: 460px;
+  width: 700px;
+  max-height: 400px;
   flex:1;
   background-color: white;
   border: 1px solid #ddd;
@@ -9,7 +9,6 @@
   padding: 2rem;
   gap: 1rem;
   margin: 1rem;
-  min-height: 0;
 }
 
 section {
@@ -21,10 +20,10 @@ section {
   position: relative;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .container {
     flex-direction: column;
-    height: 88vh;
+    width: auto;
     max-height: 100%;
   }
 }
