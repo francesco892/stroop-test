@@ -9,9 +9,6 @@ const Tutorial = ({ onGameStart }: { onGameStart: callback }) => {
     return (
         <>
             <section>
-                <header>
-                    <h2>Stroop's Test</h2>
-                </header>
                 <div className="game-desc">
                     <div className="desc-section">
                         <h4>What is it?</h4>
@@ -26,8 +23,8 @@ const Tutorial = ({ onGameStart }: { onGameStart: callback }) => {
                             <br />
                             For each word you'll have to pick between {CHOICES} choices the color the word is written in, not the one it's spelling.
                             <br />
-                            For example: if the word <span className="bold purple">purple</span> is shown, you'll have to pick red,
-                            if the word <span className="bold green">orange</span> is shown, you'll have to pick green and so on...
+                            For example: if the word <span style={{ color: "red", fontWeight: "bold" }}>purple</span> is shown, you'll have to pick red,
+                            if the word <span style={{ color: "green", fontWeight: "bold" }}>orange</span> is shown, you'll have to pick green and so on...
                         </p>
                     </div>
                     <div className="desc-section">
@@ -41,9 +38,7 @@ const Tutorial = ({ onGameStart }: { onGameStart: callback }) => {
             </section>
             <section>
                 <h2>Are you ready?</h2>
-                <Button size='l' onClick={onGameStart}>
-                    Start the test
-                </Button>
+                <Button size='l' onClick={onGameStart}>Start the test!</Button>
             </section>
         </>
     )

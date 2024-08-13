@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import Button from "../../components/Button/button";
 import ButtonGroup from "../../components/ButtonGroup/buttonGroup";
-import callback from "../../models/callback";
 import GameResult from "../../models/gameResults";
 import { getRandomElement, getRandomElements, shuffleArray } from "../../utils/randomizer";
 import "./game.css";
 
 const ROUNDS: number = import.meta.env.VITE_GAME_ROUNDS;
 const CHOICES: number = import.meta.env.VITE_GAME_CHOICES;
-const COLORS = ["red", "green", "blue", "yellow", "orange", "purple", "brown", "pink", "grey"];
+export const COLORS = ["brown", "red", "orange", "yellow", "green", "blue", "purple", "pink", "grey"];
 
-const Game = ({ onGameEnd, onGameCancel }: { onGameEnd: (gameResult: GameResult) => void, onGameCancel: callback }) => {
+const Game = ({ onGameEnd }: { onGameEnd: (gameResult: GameResult) => void }) => {
 
     const [round, setRound] = useState(0);
     const [score, setScore] = useState(0);
@@ -43,11 +42,8 @@ const Game = ({ onGameEnd, onGameCancel }: { onGameEnd: (gameResult: GameResult)
 
     return (
         <section>
-            <Button size="s" className="top-right" onClick={onGameCancel} >
-                Back
-            </Button>
             <h1 className="current-color" style={{ color }}>{colorName}</h1>
-            <ButtonGroup>
+            <ButtonGroup expanded>
                 {choices.map((c, index) => <Button key={index + "-" + c} onClick={() => onChoiceButtonClick(c)}>{c}</Button>)}
             </ButtonGroup>
         </section>

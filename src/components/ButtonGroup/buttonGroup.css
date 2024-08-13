@@ -5,7 +5,7 @@
     width: 100%;
 }
 
-.button-group > .button{
+.button-group.expanded > button{
     flex: 1;
     min-width: 0;
 }

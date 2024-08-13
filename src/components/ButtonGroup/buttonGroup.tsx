@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 import "./buttonGroup.css";
 
-const ButtonGroup = ({ children }: { children: ReactNode }) => {
+const ButtonGroup = ({ children, className, expanded }: { children?: ReactNode, className?: string, expanded?: boolean }) => {
     return (
-        <div className="button-group">
+        <div className={`button-group ${expanded ? "expanded" : ""} ${className || ""}`}>
             {children}
         </div>
     );
