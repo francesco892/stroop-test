@@ -42,9 +42,11 @@ const Game = ({ onGameEnd }: { onGameEnd: (gameResult: GameResult) => void }) =>
 
     return (
         <section>
-            <h1 className="current-color" style={{ color }}>{colorName}</h1>
+            <div className="color-container">
+                <h1 className="current-color" style={{ color }}>{colorName}</h1>
+            </div>
             <ButtonGroup expanded>
-                {choices.map((c, index) => <Button key={index + "-" + c} onClick={() => onChoiceButtonClick(c)}>{c}</Button>)}
+                {choices.map(c => <Button key={Math.random()} onClick={() => onChoiceButtonClick(c)}>{c}</Button>)}
             </ButtonGroup>
         </section>
     )
